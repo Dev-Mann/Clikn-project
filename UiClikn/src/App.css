@@ -1,0 +1,58 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+/* Hide scrollbar */
+.scroll {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For IE and Edge */
+}
+
+.scroll::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+:root {
+  --custom-blue: #3a80e0; /*#4395b1*/
+  --custom-orange: #ff914d; /*#f26204*/
+  --custom-light-blue: #d5f2fc; /*#c7e4eed1*/
+  --custom-off-white: #f9f9f9; /*#fffff4*/
+}
+
+@media screen and (max-width: 625px) {
+  .below-sm {
+    width: 280px; /*300px*/
+  }
+}
+
+.left-loader {
+  animation: leftLoader 3s infinite alternate;
+}
+
+.right-loader {
+  animation: rightLoader 3s infinite alternate;
+}
+@keyframes leftLoader {
+  0% {
+    transform: translateX(-50vw);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes rightLoader {
+  0% {
+    transform: translateX(50vw);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.rdrCalendarWrapper {
+  border-radius: 8px; /* Adjust the value as needed */
+  overflow: hidden; /* Ensures child elements respect the border radius */
+  width: 350px;
+}
+.custom-date-range .rdrCalendarWrapper {
+  border-radius: 8px !important;
+}
